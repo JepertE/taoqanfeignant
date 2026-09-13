@@ -104,7 +104,7 @@ En message privé uniquement !
 * Build 5 : Embed
 * Build 6 : Icon
 * Build 7 : Alerte vidéo
-(C'esr visible sur l'html, par contre les builds avant le 7 sont indisponibles car j'ai dû hard reset pour me préserver.)
+* (C'est visible sur l'html, par contre les builds avant le 7 sont indisponibles car j'ai dû hard reset pour me préserver.)
 </details>
 
 ## Droits
