@@ -1,0 +1,57 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #fff;
+}
+
+.container {
+    text-align: center;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1024px;
+}
+
+.container img {
+    max-width: 100%;
+    height: auto;
+}
+
+#counter {
+    font-size: clamp(2.5rem, 15vw, 6rem);
+    font-weight: bold;
+    color: #ff0000;
+    animation:change 1s linear infinite;
+}
+@keyframes change
+{
+    0%
+    {
+        color: #ff0000;
+    }
+    50%
+    {
+        color: #880808;
+    }
+    100%
+    {
+        color: #ff0000;
+    }
+}
+.label {
+    font-size: 1.5rem;
+}
+
+a {
+    color: #6B8E23;
+}
+
