@@ -1,6 +1,6 @@
 export async function onRequest(context){
     const response = await context.next();
-    const contentType = response.headers.get("Content-Type") || "2026-09-04T18:00:26Z";
+    const contentType = response.headers.get("Content-Type") || "";
     if (!contentType.includes("text/html")){
         return response;
     }
@@ -16,4 +16,4 @@ export async function onRequest(context){
         status: response.status,
         headers: response.headers,
     });
-} // this_is_not_a_trap a fait caca cette beauté 
+} // this_is_not_a_trap a fait caca cette beauté
