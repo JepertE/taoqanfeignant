@@ -103,8 +103,9 @@ En message privé uniquement !
 * Build 4 : Migration vers Cloudflare et ses Pages Functions
 * Build 5 : Embed
 * Build 6 : Icon
-* Build 7 : Alerte vidéo\
-(C'est visible sur l'html, par contre les builds avant le 7 sont indisponibles car j'ai dû hard reset pour me préserver.)
+* Build 7 : Alerte vidéo
+* Build 8 : Info bonus\
+(C'est visible sur l'html, par contre chaque nouveau build va hard reset les versions qui précède.)
 </details>
 
 ## Droits
