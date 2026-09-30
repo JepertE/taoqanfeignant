@@ -76,29 +76,24 @@ setInterval(update, 300000);
 
 
 (function () {
-    const KEY = 'bienvenue-derniere-affichage';
     const overlay = document.getElementById('bienvenue');
-    const btn = document.getElementById('bienvenue-finito');
+    const closeBtn = document.getElementById('bienvenue-finito');
+    const infoBtn = document.getElementById('info-btn');
 
-    if (!overlay || !btn) return;
+    if (!overlay || !closeBtn || !infoBtn) return;
 
-    const d = new Date();
-    const aujourdhui = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
-
-    let stocke = null;
-    try { stocke = localStorage.getItem(KEY); } catch {}
-
-    const fermer = () => {
-        try { localStorage.setItem(KEY, aujourdhui); } catch {}
-        overlay.hidden = true;
+    const ouvrir = () => {
+        overlay.hidden = false;
+        closeBtn.focus();
     };
 
-    if (stocke !== aujourdhui) {
-        overlay.hidden = false;
-        btn.focus();
-    }
+    const fermer = () => {
+        overlay.hidden = true;
+        infoBtn.focus();
+    };
 
-    btn.addEventListener('click', fermer);
+    infoBtn.addEventListener('click', ouvrir);
+    closeBtn.addEventListener('click', fermer);
 
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && !overlay.hidden) fermer();

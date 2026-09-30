@@ -108,3 +108,25 @@ a {
 #bienvenue-finito:focus {
     outline: none;
 }
+
+#info-btn {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 9999;
+    background: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#info-btn:hover {
+    background: #880808;
+}
