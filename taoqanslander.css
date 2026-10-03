@@ -114,13 +114,13 @@ a {
     top: 16px;
     right: 16px;
     z-index: 9999;
-    background: #808080;
-    color: #0E4D92;
+    background: #4682B4;
     border: none;
     border-radius: 50%;
     width: 40px;
     height: 40px;
-    font-size: 1.2rem;
+    box-sizing: border-box;
+    padding: 0;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -128,5 +128,5 @@ a {
 }
 
 #info-btn:hover {
-    background: #880808;
+    background: #35618A;
 }
