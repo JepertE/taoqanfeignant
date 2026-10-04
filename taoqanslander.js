@@ -74,7 +74,6 @@ document.addEventListener('click', function premierClic() {
 update();
 setInterval(update, 300000);
 
-
 (function () {
     const overlay = document.getElementById('bienvenue');
     const closeBtn = document.getElementById('bienvenue-finito');
