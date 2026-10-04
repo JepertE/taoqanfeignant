@@ -3,7 +3,7 @@
 <head>
 
     <!--
-    Build : 8.2.4
+    Build : 8.3.4
     -->
 
     <meta charset="UTF-8">
@@ -44,29 +44,25 @@
     <meta name="format-detection" content="telephone=no, date=no">
     <meta name="color-scheme" content="dark">
     
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org/",
-            "@type": "WebPage",
-            "name": "Taoqan va me rendre fou...",
-            "description": "Le compteur de jours sans vidéo par Taoqan.",
-            "url": "https://taoqan-feignant.pages.dev/",
-            "image": "https://taoqan-feignant.pages.dev/Slander.png",
-            "inLanguage": "fr"
-        }
-    </script>
+    <script type="application/ld+json" src="/schema.json"></script>
 
     <!--
     this_is_not_a_trap a fait un script magnifique pour mettre à jour le compte automatiquement pour la meta data 😡, merci de son travail.
     -->
-    <!-- Remerciement à ArtaFlame_ et Qrinolia d'avoir participé à la conception initiale d'avant l'ouverture au publique. -->
+    <!-- 
+    Remerciement à ArtaFlame_ et Qrinolia d'avoir participé à la conception initiale d'avant l'ouverture au publique.
+    -->
     
 </head>
 <body>
     <div class="container">
         <h1><a href="https://youtu.be/zq5kSZWDngE" target="_blank" rel="noopener noreferrer">La dernière vidéo</a> a été publiée le 4 septembre 2026...</h1>
-        <span id="counter" data-jours="__JOURS__" class="changing-colors">0</span>
-        <div class="label">jour(s) sans vidéo</div>
+            <span id="counter" data-jours="__JOURS__" class="changing-colors">
+                0
+            </span>
+            <div class="label">
+                jour(s) sans vidéo
+            </div>
         <img src="Slander.png" height="614" width="1024" alt="Taoqan et son pressing en image...">
     </div>
         <button id="info-btn" aria-label="Informations" title="Informations">
@@ -78,22 +74,28 @@
             </svg>
         </button>
     <div id="alarmeContainer" style="display:none; position:fixed; bottom:30px; left:0; width:100%; text-align:center; z-index:9999;">
-        <button id="alarmeBtn" style="padding:15px 30px; background:#ff0000; color:#fff; border:none; border-radius:10px; font-size:1.3rem; font-weight:bold; cursor:pointer;">
+        <button id="alarmeBtn" class="alarme-btn">
             Activer l'alarme
         </button>
     </div>
     <div id="bienvenue" class="bienvenue-overlay" hidden>
         <div class="bienvenue-case" role="dialog" aria-modal="true" aria-labelledby="bienvenue-titre">
-            <h2 id="bienvenue-titre">C'est quoi ce truc ?</h2>
+            <h2 id="bienvenue-titre">
+                C'est quoi ce truc ?
+            </h2>
             <p>
                 Ceci est le compteur de jours sans vidéo de Taoqan, approuvé par Taoqan lui-même !<br>
                 Ce site compte les jours depuis la dernière vidéo de Taoqan.<br>
                 Plus on attend, plus le chiffre va grossir.<br>
                 Je ne suis pas responsable en cas de psychose collective.<br>
                 Pitié, ne me placez pas sous la guillotine.<br>
-                <a href="https://github.com/JepertE/taoqanfeignant" target="_blank" rel="noopener noreferrer">Voir le code source sur GitHub</a><br>
+                <a href="https://github.com/JepertE/taoqanfeignant" target="_blank" rel="noopener noreferrer">
+                    Voir le code source sur GitHub
+                </a><br>
             </p>
-            <button id="bienvenue-finito" type="button">Fermer</button>
+            <button id="bienvenue-finito" type="button">
+                Fermer
+            </button>
         </div>
     </div>
 

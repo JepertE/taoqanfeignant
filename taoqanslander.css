@@ -130,3 +130,14 @@ a {
 #info-btn:hover {
     background: #35618A;
 }
+
+.alarme-btn {
+    padding: 15px 30px;
+    background: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+}

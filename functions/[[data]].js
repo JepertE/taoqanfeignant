@@ -19,6 +19,7 @@ export async function onRequest(context){
     headers.set("X-Frame-Options", "DENY");
     headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
     headers.set("Cache-Control", "no-store");
+    headers.set("Content-Security-Policy", "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; media-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'");
     return new Response(html, {
         status: response.status,
         headers: headers,
