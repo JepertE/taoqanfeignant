@@ -27,21 +27,21 @@ function update() {
             .then(() => {
                 alarmeActive = true;
                 console.log('Alarme autodéclenchée');
-                container.style.display = 'none';
+                container.classList.remove('visible');
             })
             .catch(() => {
                 if (!alarmeActive) {
-                    container.style.display = 'block';
+                    container.classList.add('visible');
                     btn.textContent = 'Activer l\'alarme';
                 }
             });
-    } else {
-        container.style.display = 'none';
-        if (audioElement !== null) {
-            audioElement.pause();
-            audioElement.currentTime = 0;
-            audioElement = null;
-            alarmeActive = false;
+        } else {
+            container.classList.remove('visible');
+                if (audioElement !== null) {
+                    audioElement.pause();
+                    audioElement.currentTime = 0;
+                    audioElement = null;
+                    alarmeActive = false;
         }
     }
 }
@@ -55,7 +55,7 @@ document.getElementById('alarmeBtn').addEventListener('click', function() {
     audioElement.play()
         .then(() => {
             alarmeActive = true;
-            document.getElementById('alarmeContainer').style.display = 'none';
+            document.getElementById('alarmeContainer').classList.remove('visible');
             console.log('Alarme activée');
         })
         .catch((err) => {
