@@ -141,3 +141,17 @@ a {
     font-weight: bold;
     cursor: pointer;
 }
+
+.alarme-container {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 9999;
+}
+
+.alarme-container.visible {
+    display: block;
+}

@@ -35,13 +35,13 @@ function update() {
                     btn.textContent = 'Activer l\'alarme';
                 }
             });
-        } else {
-            container.classList.remove('visible');
-                if (audioElement !== null) {
-                    audioElement.pause();
-                    audioElement.currentTime = 0;
-                    audioElement = null;
-                    alarmeActive = false;
+    } else {
+        container.classList.remove('visible');
+            if (audioElement !== null) {
+                audioElement.pause();
+                audioElement.currentTime = 0;
+                audioElement = null;
+                alarmeActive = false;
         }
     }
 }
