@@ -2,8 +2,10 @@
     "@context": "https://schema.org/",
     "@type": "WebPage",
     "name": "Taoqan va me rendre fou...",
-    "description": "Le compteur de jours sans vidéo par Taoqan.",
+    "description": "Combien de jours sans que Taoqan fasse une vidéo ?",
     "url": "https://taoqan-feignant.pages.dev/",
     "image": "https://taoqan-feignant.pages.dev/Slander.png",
-    "inLanguage": "fr"
+    "inLanguage": "fr",
+    "theme_color" : "#111111",
+    "background_color": "#111111"
 }
