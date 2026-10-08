@@ -68,10 +68,11 @@ git commit -m "skibidi"
 git push origin main
 ```
 
-<details>
+
 <summary>
 ## Aide
 </summary>
+<details>
 
 * Le favicon ou le manifest ne se chargent pas en local : ça arrive en ouvrant `index.html` directement depuis l'explorateur de fichiers (`file:///...`). Les chemins commençant par `/` supposent un vrai serveur web. Utiliser Live Server ou truc similaire règle le problème.
 
@@ -81,10 +82,10 @@ En message privé uniquement !
 * https://x.com/VeryCursedMan
 </details>
 
-<details>
 <summary>
 ## Versions
 </summary>
+<details>
 
 * Build 1 : Squelette du site web
 * Build 2 : CSS
