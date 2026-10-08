@@ -14,10 +14,10 @@ Il sert principalement à mettre en valeur quand Tao manque de POGNON 🤑🤑�
   * [Téléchargement](#téléchargement)
   * [Édition du code](#édition-du-code)
   * [Exécution du programme](#exécution-du-programme)
-* [Aide](#aide)
-* [Participants](#participants)
+  * [Aide](#aide)
 * [Versions](#versions)
 * [Droits](#droits)
+* [Participants](#participants)
 * [Info](#info)
 
 ## Description
