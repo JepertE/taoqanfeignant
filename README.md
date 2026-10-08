@@ -70,7 +70,7 @@ git push origin main
 
 <details>
 <summary>
-### Aide
+<h3>Aide</h3>
 </summary>
 
 * Le favicon ou le manifest ne se chargent pas en local : ça arrive en ouvrant `index.html` directement depuis l'explorateur de fichiers (`file:///...`). Les chemins commençant par `/` supposent un vrai serveur web. Utiliser Live Server ou truc similaire règle le problème.
@@ -83,7 +83,7 @@ En message privé uniquement !
 
 <details>
 <summary>
-### Versions
+<h3>Versions</h3>
 </summary>
 
 * Build 1 : Squelette du site web
