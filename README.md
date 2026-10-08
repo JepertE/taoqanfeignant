@@ -1,4 +1,4 @@
-# Taoqanfeignant
+# TaoqanFeignant
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.md)
 
@@ -82,15 +82,6 @@ git push origin main
 En message privé uniquement !
 * https://x.com/VeryCursedMan
 
-</details>
-
-## Participants
-
-* [@VeryCursedMan](https://twitter.com/VeryCursedMan) - Moi
-* this_is_not_a_trap - `[[data]].js`
-* ArtaFlame_ et Qrinolia - participation à la conception initiale
-
-<details>
 <summary>
 
 ## Versions
@@ -113,6 +104,12 @@ En message privé uniquement !
 Le code de ce projet est public et librement réutilisable, sous licence MIT — voir [`LICENSE.md`](LICENSE.md) pour le texte complet.
 
 L'image `Slander.png` fait exception : elle est utilisée avec l'autorisation de Taoqan, mais cette autorisation ne s'étend pas à d'autres usages. Pour la réutiliser en dehors de ce projet, l'autorisation doit être demandée directement à Taoqan, pas à moi.
+
+## Participants
+
+* [@VeryCursedMan](https://twitter.com/VeryCursedMan) - Moi
+* this_is_not_a_trap - `[[data]].js`
+* ArtaFlame_ et Qrinolia - participation à la conception initiale
 
 ## Info
 
