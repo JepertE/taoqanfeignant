@@ -99,9 +99,7 @@ En message privé uniquement !
 
 ## Droits
 
-Le code de ce projet est public et librement réutilisable, sous licence MIT — voir [`LICENSE.md`](LICENSE.md) pour le texte complet.
-
-L'image `Slander.png` fait exception : elle est utilisée avec l'autorisation de Taoqan, mais cette autorisation ne s'étend pas à d'autres usages. Pour la réutiliser en dehors de ce projet, l'autorisation doit être demandée directement à Taoqan, pas à moi.
+L'image `Slander.png` fait exception à la licence MIT : c'est un montage. L'image de Taoqan y est utilisée avec son accord ; l'illustration de Superman n'est pas de moi, elle est signée « Colombo's Art », et Superman est un personnage de DC Comics. Si vous êtes l'auteur ou l'ayant droit et souhaitez un ajustement du crédit ou un retrait, contactez-moi (voir Aide) et je ferai le nécessaire. Les icons sur ce site sont utilisées dans un but parodique, conformément à l’exception de parodie prévue par le Code de la propriété intellectuelle en France.
 
 ## Participants
 
