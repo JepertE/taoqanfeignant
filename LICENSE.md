@@ -22,4 +22,4 @@ SOFTWARE.
 
 ---
 
-Exception : l'image `Slander.png` n'est pas couverte par cette licence. C'est un montage : l'image de Taoqan y est utilisée avec son accord, l'illustration de Superman est signée « Colombo's Art », et Superman est un personnage de DC Comics. Toute réutilisation de cette image en dehors de ce projet nécessite l'accord des ayants droit concernés. Les icons sur ce site sont utilisées dans un but parodique, conformément à l’exception de parodie prévue par le Code de la propriété intellectuelle en France.
+Exception : l'image `Slander.png` n'est pas couverte par cette licence. C'est un montage : l'image de Taoqan y est utilisée avec son accord, l'illustration de Superman est signée « Colombo's Art », et Superman est un personnage de DC Comics. Toute réutilisation de cette image en dehors de ce projet nécessite l'accord des ayants droit concernés. 
