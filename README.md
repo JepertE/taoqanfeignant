@@ -17,7 +17,7 @@ Il s'agit d'un projet de fan non officiel, sans affiliation officielle à Taoqan
   * [Exécution du programme](#exécution-du-programme)
   * [Aide](#aide)
   * [Versions](#versions)
-* [Droits et licenses](#droits-et-licenses)
+* [Droits et licences](#droits-et-licences)
 * [Participants](#participants)
 * [Info](#info)
 
