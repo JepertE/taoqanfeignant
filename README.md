@@ -102,8 +102,7 @@ Le code source et la documentation du projet sont proposés sous licence MIT, so
 - Les icônes (`favicon.ico`, `favicon-16x16.png`, `favicon-32x32.png`, `apple-touch-icon.png`, `android-chrome-192x192.png`, `android-chrome-512x512.png`) : le mainteneur indique qu'elles ont été réalisées à partir de la photo de profil de Taoqan et que cette utilisation a son accord. Elles sont exclues de la licence MIT ; leur réutilisation nécessite de vérifier les droits sur la photo et les éléments incorporés.
 - `alarme.mp3` : « Evacuation Alarm #3 », enregistré par Axeline T. et publié sur BigSoundBank. La fiche de la source indique une licence CC0, qui autorise notamment la redistribution. Source : [fiche du son](https://bigsoundbank.com/evacuation-alarm-3-s3413.html) ; [conditions de licence de BigSoundBank](https://bigsoundbank.com/licenses.html). Le fichier audio reste soumis à cette licence CC0, et non à la licence MIT du code.
 
-Si vous êtes l'auteur ou l'ayant droit d'un élément et pensez qu'un crédit doit être ajusté ou qu'un retrait est nécessaire, contactez le mainteneur via la section [Aide](#aide).
-
+Si vous êtes l'auteur ou l'ayant droit d'un élément et pensez qu'un crédit doit être ajusté ou qu'un retrait est nécessaire, contactez-moi directement en message privé : [@VeryCursedMan](https://x.com/VeryCursedMan). Je traiterai la demande rapidement.
 ## Participants
 
 - [@VeryCursedMan](https://x.com/VeryCursedMan) — mainteneur, moi
