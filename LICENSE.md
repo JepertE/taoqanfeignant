@@ -26,4 +26,5 @@ Exception : les fichiers suivants ne sont pas couverts par cette licence, et leu
 - `Slander.png` : montage. L'image de Taoqan y est utilisée avec son accord ; l'illustration de Superman est signée « Colombo's Art », et Superman est un personnage de DC Comics.
 - Les icônes (`favicon.ico`, `favicon-16x16.png`, `favicon-32x32.png`, `apple-touch-icon.png`, `android-chrome-192x192.png`, `android-chrome-512x512.png`) : parodie réalisée par JepertE à partir de la photo de profil de Taoqan, parodiée en diable (l'incarnation de la fainéantise), utilisée avec son accord.
 - `alarme.mp3` : « Saudi Arabia EAS Alarm (1924) » par JeremayJimenez, utilisé sous la licence Pixabay (https://pixabay.com/service/license-summary/). Il reste téléchargeable dans ce dépôt mais n'est pas proposé sous licence MIT : les conditions de Pixabay s'appliquent à toute réutilisation.
+
 Toute réutilisation de ces fichiers en dehors de ce projet nécessite l'accord des ayants droit concernés ou le respect de leur licence d'origine.

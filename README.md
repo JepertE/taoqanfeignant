@@ -94,12 +94,12 @@ En message privé uniquement !
 * Build 6 : Icon
 * Build 7 : Alerte vidéo
 * Build 8 : Info bonus\
-(C'est visible sur l'html, par contre chaque nouveau build va hard reset les versions qui précède.)
+(C'est visible sur l'html, par contre chaque nouveau build va hard reset les versions qui précèdent.)
 </details>
 
 ## Droits
 
-L'image `Slander.png` fait exception à la licence MIT : c'est un montage. L'image de Taoqan y est utilisée avec son accord ; l'illustration de Superman n'est pas de moi, elle est signée « Colombo's Art », et Superman est un personnage de DC Comics. Si vous êtes l'auteur ou l'ayant droit et souhaitez un ajustement du crédit ou un retrait, contactez-moi (voir Aide) et je ferai le nécessaire.Le code de ce projet est public et librement réutilisable, sous licence MIT — voir [`LICENSE.md`](LICENSE.md) pour le texte complet.
+Le code de ce projet est public et librement réutilisable, sous licence MIT — voir [`LICENSE.md`](LICENSE.md) pour le texte complet.
 
 Certains fichiers font exception à la licence MIT, leurs droits restent à leurs auteurs (détail dans `LICENSE.md`) :
 - `Slander.png` est un montage. L'image de Taoqan y est utilisée avec son accord ; l'illustration de Superman n'est pas de moi : elle est signée « Colombo's Art », et Superman est un personnage de DC Comics. Je la reprends dans un but de parodie, en m'appuyant sur l'exception de parodie de l'article L122-5 4° du Code de la propriété intellectuelle.
