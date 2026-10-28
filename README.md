@@ -2,8 +2,9 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.md)
 
-Bonjour, ce dépôt garde le code source du site web (https://taoqan-feignant.pages.dev/) qui compte le nombre de jours sans vidéo de la part de Taoqan (https://www.youtube.com/@taoqan).
-Il sert principalement à mettre en valeur quand Tao manque de POGNON 🤑🤑🤑!
+Bonjour, ce dépôt garde le code source du site web [Taoqan-Feignant](https://taoqan-feignant.pages.dev/), un site humoristique qui compte le nombre de jours écoulés depuis la dernière vidéo publiquement connue de [Taoqan](https://www.youtube.com/@taoqan).
+
+Il s'agit d'un projet de fan non officiel, sans affiliation officielle à Taoqan. Le compteur est humoristique : il ne prétend pas décrire sa situation financière, sa vie privée ou ses motivations.
 
 ## Sommaire
 
@@ -16,55 +17,52 @@ Il sert principalement à mettre en valeur quand Tao manque de POGNON 🤑🤑�
   * [Exécution du programme](#exécution-du-programme)
   * [Aide](#aide)
   * [Versions](#versions)
-* [Droits](#droits)
+* [Droits et licenses](#droits-et-licenses)
 * [Participants](#participants)
 * [Info](#info)
 
 ## Description
 
-Le principe est simple, une date de référence qui est celle de la dernière vidéo connue de Taoqan est stockée dans le code. Le site calcule combien de jours entre cette date et maintenant. Il affiche le résultat bien en évidence en rouge.
-Ce chiffre n'apparaît pas que sur la page elle-même, il est aussi dans l'aperçu qui s'affiche quand le lien est partagé sur Twitter, Discord, ou autre part. Partager le lien, c'est donc automatiquement partager le compteur à jour, sans rien faire de plus.
-Le jour où une nouvelle vidéo sort enfin, le site s'en aperçoit tout seul et propose de déclencher une alarme pour l'événement comme il se doit.
-Ce projet est né d'une famine de vidéo, il ne devrait pas être pris au sérieux.
+Le site calcule le nombre de jours depuis une date de référence correspondant à la dernière vidéo connue de Taoqan. Le résultat est affiché sur la page et dans l'aperçu affiché lorsqu'un lien est partagé.
+
+Le site propose également une alarme sonore associée à l'événement d'une nouvelle vidéo. Le projet est humoristique et ne doit pas être pris comme une déclaration factuelle sur la vie personnelle ou la situation financière de Taoqan.
 
 ## Quèsaco ???
 
 ### Maintenance du site
 
-* Git, Github et Cloudflare assurent que le site est déployé.
-* Moi-même, je n'ai pas d'héritier donc ce projet tombe avec moi !
-* Rien d'autre car pas de framework, pas de gestionnaire de paquets, pas d'étape de build
+- GitHub et Cloudflare Pages assurent le stockage du code et le déploiement du site.
+- Le projet n'utilise pas de framework, de gestionnaire de paquets ni d'étape de compilation particulière.
 
 ### Comment ne pas casser le site web ?
 
-* Autorisez le JavaScript, il est public donc normalement vous pouvez vérifier si je suis un méchant très méchant 😈...
-* Autorisez la lecture automatique, comment je suis supposé briser vos oreilles quand Taoqan sort une vidéo si le lecteur du navigateur ne m'écoute pas.
-* Mettez à jour votre navigateur.
-* Nettoyez le cache.
-* Demandez-moi directement de l'aide !
+- JavaScript doit être autorisé pour que les fonctions du site marchent.
+- La lecture audio doit être autorisée ou déclenchée par une action de l'utilisateur, selon les règles du navigateur.
+- Utilisez un navigateur à jour et, en cas de problème, essayez de vider le cache.
+- En cas de difficulté, contactez le mainteneur (voir [Aide](#aide)).
 
 ### Téléchargement
 
-* Ce dépôt contient tous les fichiers, si je n'ai pas mal mis mes permissions alors il devrait être à votre disposition. Ce dépôt est censé être clonable.
-* Ayez la mémoire et le stockage minimum ; 512MB DDR3 et 64MB libre HDD/SSD (estimation).
-* Une Cloudflare Pages Function (functions/[[data]].js) est présente, qui ne s'exécute que sur un vrai déploiement Cloudflare, jamais en ouvrant les fichiers directement.
+- Le dépôt contient le code source et les fichiers nécessaires au projet. Certains fichiers d'illustration et d'audio sont soumis à des conditions de licence distinctes, décrites dans [`LICENSE.md`](LICENSE.md).
+- Configuration indicative minimale : 512 Mo de RAM et 64 Mo d'espace disque libre (estimation non garantie).
+- Une Cloudflare Pages Function (`functions/[[data]].js`) s'exécute lors d'un déploiement sur Cloudflare ; elle ne fonctionne pas en ouvrant directement les fichiers depuis l'explorateur (`file:///`).
 
 ### Édition du code
 
-* Avoir un programme qui permet de modifier ou observer le HTML, JS et CSS.
-* Avoir un programme qui permet de débugger.
-* Me demander le changement si c'est important.
-Je travaille seul mais this_is_not_a_trap est libre de m'aider pour le JS.
+- Un éditeur permettant de modifier le HTML, le JavaScript et le CSS est suffisant.
+- Des outils de débogage peuvent aider en cas de problème.
+- Pour proposer une modification importante, contactez le mainteneur.
+- Le mainteneur travaille principalement seul ; `this_is_not_a_trap` peut l'aider sur le JavaScript.
 
 ### Exécution du programme
 
-* En local, un serveur simple suffit mais l'extension Live Server de VS Code fonctionne
-* En production, un simple push vers la branche connectée déclenche un déploiement automatique sur Cloudflare Pages
+- En local, un serveur web simple suffit ; l'extension Live Server de Visual Studio Code convient également.
+- En production, un push vers la branche reliée à Cloudflare Pages déclenche normalement un déploiement automatique.
 
 ```bash
 git status
 git add .
-git commit -m "skibidi"
+git commit -m "test"
 git push origin main
 ```
 
@@ -73,9 +71,8 @@ git push origin main
 <h3>Aide</h3>
 </summary>
 
-* Le favicon ou le manifest ne se chargent pas en local : ça arrive en ouvrant `index.html` directement depuis l'explorateur de fichiers (`file:///...`). Les chemins commençant par `/` supposent un vrai serveur web. Utiliser Live Server ou truc similaire règle le problème.
-
-* Le compteur affiche un chiffre inattendu en local : Cloudflare ne tourne pas en dehors d'un vrai déploiement. Le script client bascule alors sur son propre calcul de secours mais indépendant de ce que la Function calculerait en production.
+- Si le favicon ou le manifest ne se charge pas en local, évitez d'ouvrir directement `index.html` via `file:///`. Les chemins commençant par `/` supposent un serveur web. Utilisez Live Server ou un serveur similaire.
+- Le compteur peut afficher une valeur différente en local : Cloudflare ne s'exécute pas en dehors d'un véritable déploiement Cloudflare. Le script client utilise alors un calcul de secours.
 
 En message privé uniquement !
 * https://x.com/VeryCursedMan
@@ -94,26 +91,25 @@ En message privé uniquement !
 * Build 6 : Icon
 * Build 7 : Alerte vidéo
 * Build 8 : Info bonus\
-(C'est visible sur l'html, par contre chaque nouveau build va hard reset les versions qui précèdent.)
+Les indications de build dans la page sont informatives et ne constituent pas un historique technique exhaustif.
 </details>
 
-## Droits
+## Droits et licences
 
-Le code de ce projet est public et librement réutilisable, sous licence MIT — voir [`LICENSE.md`](LICENSE.md) pour le texte complet.
+Le code source et la documentation du projet sont proposés sous licence MIT, sous réserve des exceptions listées dans [`LICENSE.md`](LICENSE.md). **Le badge MIT ne signifie pas que tous les fichiers médias du dépôt sont eux aussi sous licence MIT.**
 
-Certains fichiers font exception à la licence MIT, leurs droits restent à leurs auteurs (détail dans `LICENSE.md`) :
-- `Slander.png` est un montage. L'image de Taoqan y est utilisée avec son accord ; l'illustration de Superman n'est pas de moi : elle est signée « Colombo's Art », et Superman est un personnage de DC Comics. Je la reprends dans un but de parodie, en m'appuyant sur l'exception de parodie de l'article L122-5 4° du Code de la propriété intellectuelle.
-- Les icônes sont une parodie réalisée par moi : la photo de profil de Taoqan, parodiée en diable (l'incarnation de la fainéantise), utilisée avec son accord.
-- Le son d'alarme (`alarme.mp3`) est « Saudi Arabia EAS Alarm (1924) » par JeremayJimenez, utilisé sous la licence Pixabay.
+- `Slander.png` : illustration ou montage utilisé par le projet. Ce fichier est exclu de la licence MIT ; les droits applicables dépendent de son origine et des éventuels éléments qu'il contient. Aucune permission générale de réutilisation de ce fichier n'est accordée par la licence MIT.
+- Les icônes (`favicon.ico`, `favicon-16x16.png`, `favicon-32x32.png`, `apple-touch-icon.png`, `android-chrome-192x192.png`, `android-chrome-512x512.png`) : le mainteneur indique qu'elles ont été réalisées à partir de la photo de profil de Taoqan et que cette utilisation a son accord. Elles sont exclues de la licence MIT ; leur réutilisation nécessite de vérifier les droits sur la photo et les éléments incorporés.
+- `alarme.mp3` : « Evacuation Alarm #3 », enregistré par Axeline T. et publié sur BigSoundBank. La fiche de la source indique une licence CC0, qui autorise notamment la redistribution. Source : [fiche du son](https://bigsoundbank.com/evacuation-alarm-3-s3413.html) ; [conditions de licence de BigSoundBank](https://bigsoundbank.com/licenses.html). Le fichier audio reste soumis à cette licence CC0, et non à la licence MIT du code.
 
-Si vous êtes l'auteur ou l'ayant droit d'un de ces éléments et souhaitez un ajustement du crédit ou un retrait, contactez-moi (voir Aide) et je ferai le nécessaire.
+Si vous êtes l'auteur ou l'ayant droit d'un élément et pensez qu'un crédit doit être ajusté ou qu'un retrait est nécessaire, contactez le mainteneur via la section [Aide](#aide).
 
 ## Participants
 
-* [@VeryCursedMan](https://twitter.com/VeryCursedMan) - Moi
-* this_is_not_a_trap - `[[data]].js`
-* ArtaFlame_ et Qrinolia - participation à la conception initiale
+- [@VeryCursedMan](https://x.com/VeryCursedMan) — mainteneur, moi
+- `this_is_not_a_trap` — `functions/[[data]].js`
+- `ArtaFlame_` et `Qrinolia` — participation à la conception initiale
 
 ## Info
 
-Ce site se moque gentiment d'un créateur de contenu réel, dans un esprit de méchanceté amicale, le contexte est à garder. Merci.
+Site humoristique de fan, non officiel et sans affiliation à Taoqan. Il se réfère à des publications publiques et ne prétend pas révéler ou expliquer sa situation personnelle, financière ou ses motivations. L'image de Taoqan est indiquée par le mainteneur comme utilisée avec son consentement ; les droits sur les autres éléments restent soumis à leurs licences ou autorisations respectives.

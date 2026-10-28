@@ -22,9 +22,12 @@ SOFTWARE.
 
 ---
 
-Exception : les fichiers suivants ne sont pas couverts par cette licence, et leurs droits restent à leurs auteurs :
-- `Slander.png` : montage. L'image de Taoqan y est utilisée avec son accord ; l'illustration de Superman est signée « Colombo's Art », et Superman est un personnage de DC Comics.
-- Les icônes (`favicon.ico`, `favicon-16x16.png`, `favicon-32x32.png`, `apple-touch-icon.png`, `android-chrome-192x192.png`, `android-chrome-512x512.png`) : parodie réalisée par JepertE à partir de la photo de profil de Taoqan, parodiée en diable (l'incarnation de la fainéantise), utilisée avec son accord.
-- `alarme.mp3` : « Saudi Arabia EAS Alarm (1924) » par JeremayJimenez, utilisé sous la licence Pixabay (https://pixabay.com/service/license-summary/). Il reste téléchargeable dans ce dépôt mais n'est pas proposé sous licence MIT : les conditions de Pixabay s'appliquent à toute réutilisation.
+## Éléments exclus de la licence MIT
 
-Toute réutilisation de ces fichiers en dehors de ce projet nécessite l'accord des ayants droit concernés ou le respect de leur licence d'origine.
+La licence MIT ci-dessus s'applique au code source et à la documentation du projet, sauf pour les fichiers explicitement exclus ci-dessous. Elle ne remplace pas les licences ou autorisations applicables aux médias et autres éléments de tiers.
+
+- `Slander.png` : illustration ou montage utilisé par le projet. Ce fichier est exclu de la licence MIT. Les droits applicables dépendent de son origine et des éléments qui le composent ; aucune permission générale de réutilisation n'est accordée par la licence MIT.
+- Les icônes (`favicon.ico`, `favicon-16x16.png`, `favicon-32x32.png`, `apple-touch-icon.png`, `android-chrome-192x192.png`, `android-chrome-512x512.png`) : le mainteneur indique qu'elles ont été réalisées à partir de la photo de profil de Taoqan avec son accord. Ces fichiers sont exclus de la licence MIT. Cet accord déclaré pour le projet ne transfère pas automatiquement aux réutilisateurs les droits sur la photo ou sur d'éventuels autres éléments incorporés.
+- `alarme.mp3` : « Evacuation Alarm #3 », enregistré par Axeline T., publié sur BigSoundBank et indiqué sous licence CC0. La fiche de la source autorise explicitement la modification et la redistribution, y compris dans des projets commerciaux, sans attribution obligatoire. Source : https://bigsoundbank.com/evacuation-alarm-3-s3413.html. Conditions de licence : https://bigsoundbank.com/licenses.html. Le fichier audio reste couvert par la licence CC0, et non par la licence MIT du code.
+
+Pour toute réutilisation des éléments exclus ci-dessus, vérifiez la licence et les autorisations applicables à l'élément concerné. En cas de demande légitime de correction de crédit ou de retrait, contactez le mainteneur via le compte indiqué dans le README.
