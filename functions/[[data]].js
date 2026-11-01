@@ -1,5 +1,24 @@
 export async function onRequest(context){
+
+    const method = context.request.method;
+
+    if (method !== "GET" && method !== "HEAD") {
+        return new Response("Method Not Allowed", {
+            status: 405,
+            headers: {
+                "Allow": "GET, HEAD",
+                "Content-Type": "text/plain; charset=utf-8",
+                "Cache-Control": "no-store",
+                "X-Content-Type-Options": "nosniff"
+            }
+        });
+    }
+
     const response = await context.next();
+
+    if (method === "HEAD") {
+        return response;
+    }
     const contentType = response.headers.get("Content-Type") || "";
     if (!contentType.includes("text/html")){
         return response;
