@@ -1,5 +1,4 @@
 export async function onRequest(context){
-
     const method = context.request.method;
 
     if (method !== "GET" && method !== "HEAD") {
@@ -15,10 +14,6 @@ export async function onRequest(context){
     }
 
     const response = await context.next();
-
-    if (method === "HEAD") {
-        return response;
-    }
     const contentType = response.headers.get("Content-Type") || "";
     if (!contentType.includes("text/html")){
         return response;
@@ -39,7 +34,7 @@ export async function onRequest(context){
     headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
     headers.set("Cache-Control", "no-store");
     headers.set("Content-Security-Policy", "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; media-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'");
-    return new Response(html, {
+    return new Response(method === "HEAD" ? null : html, {
         status: response.status,
         headers: headers,
     });
