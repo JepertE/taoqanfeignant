@@ -18,7 +18,7 @@ export async function onRequest(context){
     if (!contentType.includes("text/html")){
         return response;
     }
-    const startDate = new Date("2026-09-04T18:00:26Z");
+    const startDate = new Date("2026-11-04T16:00:35Z");
     const days = Math.floor(
         (Date.now() - startDate.getTime()) / 86400000
     );

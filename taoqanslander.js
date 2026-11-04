@@ -1,4 +1,4 @@
-const derniereVideo = new Date("2026-09-04T18:00:26Z");
+const derniereVideo = new Date("2026-11-04T16:00:35Z");
 
 let audioElement = null;
 let alarmeActive = false;
