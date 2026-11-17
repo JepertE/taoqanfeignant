@@ -73,6 +73,9 @@ a {
     color: #fff;
     max-width: 720px;
     width: 100%;
+    max-height: 100%;
+    overflow-y: auto;
+    box-sizing: border-box;
     padding: 1.5rem;
     border-radius: 12px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
@@ -105,8 +108,9 @@ a {
     background: #880808;
 }
 
-#bienvenue-finito:focus {
-    outline: none;
+#bienvenue-finito:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
 }
 
 #info-btn {
@@ -154,4 +158,10 @@ a {
 
 .alarme-container.visible {
     display: block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #counter {
+        animation: none;
+    }
 }

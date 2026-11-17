@@ -13,7 +13,10 @@ export async function onRequest(context){
         });
     }
 
-    const response = await context.next();
+    const reqHeaders = new Headers(context.request.headers);
+    reqHeaders.delete("If-None-Match");
+    reqHeaders.delete("If-Modified-Since");
+    const response = await context.next(new Request(context.request, { headers: reqHeaders }));
     const contentType = response.headers.get("Content-Type") || "";
     if (!contentType.includes("text/html")){
         return response;
@@ -29,6 +32,8 @@ export async function onRequest(context){
     const headers = new Headers(response.headers);
     headers.delete("Content-Length");
     headers.delete("Content-Encoding");
+    headers.delete("ETag");
+    headers.delete("Last-Modified");
     headers.set("X-Content-Type-Options", "nosniff");
     headers.set("X-Frame-Options", "DENY");
     headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
@@ -38,4 +43,4 @@ export async function onRequest(context){
         status: response.status,
         headers: headers,
     });
-} // this_is_not_a_trap a fait caca cette beauté
+} // this_is_not_a_trap a fait caca cette beauté !

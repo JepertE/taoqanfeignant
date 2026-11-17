@@ -2,6 +2,7 @@ const derniereVideo = new Date("2026-11-04T16:00:35Z");
 
 let audioElement = null;
 let alarmeActive = false;
+let alarmeCoupee = false;
 
 function update() {
     const counterElement = document.getElementById('counter');
@@ -18,6 +19,7 @@ function update() {
     const btn = document.getElementById('alarmeBtn');
 
     if (jours === 0) {
+        if (alarmeCoupee) return;
         if (audioElement === null) {
             audioElement = new Audio('/alarme.mp3');
             audioElement.loop = true;
@@ -27,7 +29,8 @@ function update() {
             .then(() => {
                 alarmeActive = true;
                 console.log('Alarme autodéclenchée');
-                container.classList.remove('visible');
+                btn.textContent = 'Couper l\'alarme';
+                container.classList.add('visible');
             })
             .catch(() => {
                 if (!alarmeActive) {
@@ -47,6 +50,16 @@ function update() {
 }
 
 document.getElementById('alarmeBtn').addEventListener('click', function() {
+    const container = document.getElementById('alarmeContainer');
+    if (alarmeActive) {
+        audioElement.pause();
+        audioElement.currentTime = 0;
+        alarmeActive = false;
+        alarmeCoupee = true;
+        container.classList.remove('visible');
+        console.log('Alarme coupée');
+        return;
+    }
     if (audioElement === null) {
         audioElement = new Audio('/alarme.mp3');
         audioElement.loop = true;
@@ -55,7 +68,8 @@ document.getElementById('alarmeBtn').addEventListener('click', function() {
     audioElement.play()
         .then(() => {
             alarmeActive = true;
-            document.getElementById('alarmeContainer').classList.remove('visible');
+            this.textContent = 'Couper l\'alarme';
+            container.classList.add('visible');
             console.log('Alarme activée');
         })
         .catch((err) => {
@@ -65,14 +79,29 @@ document.getElementById('alarmeBtn').addEventListener('click', function() {
 });
 
 document.addEventListener('click', function premierClic() {
-    if (parseInt(document.getElementById('counter').textContent) === 0 && !alarmeActive) {
+    if (parseInt(document.getElementById('counter').textContent) === 0 && !alarmeActive && !alarmeCoupee) {
         document.getElementById('alarmeBtn').click();
     }
     document.removeEventListener('click', premierClic);
 }, { once: true });
 
 update();
-setInterval(update, 300000);
+async function rafraichir() {
+    if (document.visibilityState !== 'visible') return;
+    try {
+        const reponse = await fetch('/', { cache: 'no-store' });
+        const doc = new DOMParser().parseFromString(await reponse.text(), 'text/html');
+        const valeur = doc.getElementById('counter')?.dataset.jours;
+        if (!isNaN(parseInt(valeur, 10))) {
+            document.getElementById('counter').dataset.jours = valeur;
+        }
+    } catch (e) {
+    }
+    update();
+}
+
+document.addEventListener('visibilitychange', rafraichir);
+setInterval(rafraichir, 1800000);
 
 (function () {
     const overlay = document.getElementById('bienvenue');
