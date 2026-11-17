@@ -22,6 +22,8 @@ jobs:
     steps:
       - name: Récupération du dépôt
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
 
       - name: Configuration de Node.js
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
@@ -32,6 +34,19 @@ jobs:
         run: |
           node --check taoqanslander.js
           node --check 'functions/[[data]].js'
+          node --check functions/alarme.mp3.js
+
+      - name: Vérification JSON et cohérence des dates
+        run: |
+          node -e '
+            const fs = require("fs");
+            for (const f of ["site.webmanifest", "_routes.json"]) if (fs.existsSync(f)) JSON.parse(fs.readFileSync(f, "utf8"));
+            const ld = fs.readFileSync("index.html", "utf8").match(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/);
+            JSON.parse(ld[1]);
+            const date = (f) => fs.readFileSync(f, "utf8").match(/new Date\("([^"]+)"\)/)[1];
+            const a = date("functions/[[data]].js"), b = date("taoqanslander.js");
+            if (a !== b) { console.error("startDate (" + a + ") != derniereVideo (" + b + ")"); process.exit(1); }
+          ' 
 
       - name: Vérification HTML
-        run: npx --yes htmlhint@1.6.3 index.html
+        run: npx --yes htmlhint@1.6.3 index.html 404.html
