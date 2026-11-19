@@ -45,7 +45,7 @@ Le site propose également une alarme sonore associée à l'événement d'une no
 
 - Le dépôt contient le code source et les fichiers nécessaires au projet. Certains fichiers d'illustration et d'audio sont soumis à des conditions de licence distinctes, décrites dans [`LICENSE.md`](LICENSE.md).
 - Configuration indicative minimale : 512 Mo de RAM et 64 Mo d'espace disque libre (estimation non garantie).
-- Une Cloudflare Pages Function (`functions/[[data]].js`) s'exécute lors d'un déploiement sur Cloudflare ; elle ne fonctionne pas en ouvrant directement les fichiers depuis l'explorateur (`file:///`).
+- Une Cloudflare Pages Function (`functions/[[data]].js`) s'exécute à chaque requête sur Cloudflare Pages ; elle ne fonctionne pas en ouvrant directement les fichiers depuis l'explorateur (`file:///`).
 
 ### Édition du code
 
@@ -56,7 +56,7 @@ Le site propose également une alarme sonore associée à l'événement d'une no
 
 ### Exécution du programme
 
-- En local, un serveur web simple suffit ; l'extension Live Server de Visual Studio Code convient également.
+- En local, un serveur web simple suffit ; l'extension Live Server de Visual Studio Code convient également. Pour tester aussi la Function (compteur injecté, en-têtes, CSP), lancez `npx wrangler pages dev .` à la racine du dépôt.
 - En production, un push vers la branche reliée à Cloudflare Pages déclenche normalement un déploiement automatique.
 
 ```bash
@@ -98,7 +98,7 @@ Les indications de build dans la page sont informatives et ne constituent pas un
 
 Le code source et la documentation du projet sont proposés sous licence MIT, sous réserve des exceptions listées dans [`LICENSE.md`](LICENSE.md). **Le badge MIT ne signifie pas que tous les fichiers médias du dépôt sont eux aussi sous licence MIT.**
 
-- `Slander.png` : illustration ou montage utilisé par le projet. Ce fichier est exclu de la licence MIT ; les droits applicables dépendent de son origine et des éventuels éléments qu'il contient. Aucune permission générale de réutilisation de ce fichier n'est accordée par la licence MIT.
+- `og-image.png` et `Slander.webp` : versions dérivées de `Slander.png` ; mêmes exclusions et mêmes réserves.
 - Les icônes (`favicon.ico`, `favicon-16x16.png`, `favicon-32x32.png`, `apple-touch-icon.png`, `android-chrome-192x192.png`, `android-chrome-512x512.png`) : le mainteneur indique qu'elles ont été réalisées à partir de la photo de profil de Taoqan et que cette utilisation a son accord. Elles sont exclues de la licence MIT ; leur réutilisation nécessite de vérifier les droits sur la photo et les éléments incorporés.
 - `alarme.mp3` : « Evacuation Alarm #3 », enregistré par Axeline T. et publié sur BigSoundBank. La fiche de la source indique une licence CC0, qui autorise notamment la redistribution. Source : [fiche du son](https://bigsoundbank.com/evacuation-alarm-3-s3413.html) ; [conditions de licence de BigSoundBank](https://bigsoundbank.com/licenses.html). Le fichier audio reste soumis à cette licence CC0, et non à la licence MIT du code.
 
